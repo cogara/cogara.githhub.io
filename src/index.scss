@@ -1,0 +1,228 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.App {
+  position: relative;
+}
+
+
+
+body {
+  padding: 2em;
+}
+/* .input-group {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  width: 500px;
+  margin: 0 auto;
+}
+
+.input-group > div {
+  flex: 1 100%;
+  display: flex;
+  justify-content: space-between;
+} */
+
+body {
+  background: rgb(40,40,40);
+}
+.input-section, 
+.input-headers {
+  display: flex;
+  flex-wrap: nowrap;
+  color: white;
+  background: rgb(75,75,75);
+  padding: 1em;
+  justify-content: center;
+}
+.input-headers {
+  justify-content: center;
+  border-bottom: 1px solid rgb(40,40,40);
+}
+.input-section {
+  .input-group {
+    flex: 1 1 auto;
+  }
+  @media screen and (max-width: 1280px) {
+    flex-wrap: wrap;
+      .input-group {
+        flex: 1 1 100%;
+      }
+  }
+}
+
+
+.input-group, 
+.input-header {
+  display: flex; 
+  flex-wrap: wrap;
+  // border: 1px solid red;
+  // margin: 1em;
+
+  padding: 0 .5em;
+  justify-content: flex-start;
+  align-items: stretch;
+  label {
+    text-align: left;
+    // margin-bottom: .5em;
+    flex: 1 0 100%;
+  }
+  input {
+    // border: 1px solid green;
+    flex: 1 0 100%;
+    padding: .5em;
+    margin: 1em 0;
+  }
+}
+
+// .input-header {
+//   font-size: 1.1rem;
+//   flex-wrap: nowrap;
+//   align-items: center;
+//   > label, input {
+//     font-size: 1em;
+//     margin-right: 1em;
+//     flex: 1 0 auto;
+//   }
+// }
+
+.math-is-hard {
+  // background: red;
+  color: white;
+  border: 3px solid rgb(75,75,75);
+  border-top: none;
+  padding-bottom: 3em;
+}
+
+.display-values {
+
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  .display-category {
+    padding: 1em;
+    display: flex;
+    flex-wrap: wrap;
+    flex: 1 0 0; 
+    align-items: center;
+    // justify-content: center;
+    // align-content: center;
+    // flex: 0 0 auto;
+    &__row {
+      display: flex;
+      flex: 1 0 100%;
+      justify-content: center;
+      border-bottom: 1px solid rgb(75,75,75);
+      > * {
+        display: flex;
+        align-items: center;
+        padding: 1em;
+        // flex: .75 0 0;
+        text-align: right;
+        justify-content: flex-end;
+      }
+      > h2 {
+        margin: 0;
+        border: none;
+        color: rgb(200,255,255)
+      }
+      > h3 {
+        justify-content: center;
+        flex: 1 0 0;
+      }
+      > div {
+        flex: 0 0 125px;
+      }
+    }
+    &.better-deal {
+      > * {
+        border-color: green;
+      }
+    }
+    h3 {
+      margin: 0;
+    }
+  }
+  @media screen and (max-width: 1280px) {
+    flex-wrap: wrap;
+    .display-category {
+      flex: 1 1 100%;
+    }
+  }
+}
+
+.empty { 
+  border: 1px solid rgba(red, .7);
+}
+
+.color {
+  &-gold {
+    color: gold;
+  }
+  
+  &-money {
+    color: rgb(137, 255, 137);
+  }
+  &-crystal {
+    color: rgb(170, 170, 255);
+  }
+
+}
+
+.calculator {
+  margin: 1em 0;
+}
+
+button {
+  display: inline-block;
+  font-weight: 400;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  border: 1px solid transparent;
+  padding: .375rem .75rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  border-radius: .25rem;
+  transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+  // padding: .5em 1em;
+  // background: #c8ffff;
+  // border-radius: .5em;
+  // position: relative;
+  // font-size: .9em;
+  // color: lighten($color: black, $amount: 10);
+  &:hover {
+    cursor: pointer;
+    background: #c8ffff;
+  }
+}
+
+.btn-remove {
+  position: absolute; 
+  bottom: 1em;
+  left: 1em;
+  background: #b37373;
+  &:hover {
+    background: #794e4e;
+  }
+}
